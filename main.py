@@ -36,8 +36,11 @@ def run():
   cc3 = input('Enter your course 3 credit: ')
   lg3 = getGradePoint(grade3)
   print(f"Grade point for course 3 is: {lg3}")
-  
-  gpa = (((lg1*cc1)+(lg2*cc2)+(lg3*cc3))/(cc1+cc2+cc3))
+  cctotal = cc1+cc2+cc3
+  cm1 = lg1*cc1
+  cm2 = lg2*cc2
+  cm3 = lg3*cc3
+  gpa = (cm1+cm2+cm3)/cctotal
   print(f"Your GPA is: {gpa}")
 
 if __name__=="__main__":
